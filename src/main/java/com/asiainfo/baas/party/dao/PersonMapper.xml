@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.asiainfo.baas.party.dao.PersonMapper">  <!--这个和我们的dao接口类的名称相同-->
+<resultMap id="BaseResultMap" type="com.asiainfo.baas.party.bean.Person" >
+    <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+  </resultMap>
+  
+   <select id="getPersonList" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT 
+    	ID,NAME,SEX
+   FROM 
+   		person
+  </select>
+  <insert id="addPerson" parameterType="com.asiainfo.baas.party.bean.Person" >
+  	insert into 
+  		person
+  	values
+  		(#{id},#{name},#{sex})
+  </insert>
+  
+  <select id="getPersonById" parameterType="java.lang.String" resultMap="BaseResultMap">
+  	select 
+  		id,
+  		name,
+  		sex
+  	from 
+  		person
+  	where id=#{id}
+  </select> 
+  
+</mapper>
