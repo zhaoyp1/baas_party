@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class PartyRole {
 
-	Party partyId;
+	private Party partyId;
 	/**
 	 * ½ÇÉ«ID
 	 */
@@ -15,6 +15,7 @@ public class PartyRole {
 	private String status;
 	private Date createDate;
 	private Date modifyDate;
+	private String roleSpecId;
 
 	public Party getPartyId() {
 		return this.partyId;
@@ -50,6 +51,14 @@ public class PartyRole {
 
 	public void setModifyDate(Date modifyDate) {
 		this.modifyDate = modifyDate;
+	}
+
+	public String getRoleSpecId() {
+		return this.roleSpecId;
+	}
+
+	public void setRoleSpecId(String roleSpecId) {
+		this.roleSpecId = roleSpecId;
 	}
 
 }
