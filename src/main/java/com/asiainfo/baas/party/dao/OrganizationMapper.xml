@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.asiainfo.baas.party.dao.OrganizationMapper">  <!--这个和我们的dao接口类的名称相同-->
+<resultMap id="BaseResultMap" type="com.asiainfo.baas.party.bean.Organization">
+   <result column="organization_id" property="organizationId" jdbcType="VARCHAR" />
+   <result column="legal_person" property="legalPerson" jdbcType="VARCHAR" />
+   <result column="member_number" property="memberNumber" jdbcType="INTEGER" />
+   <result column="found_date" property="foundDate" jdbcType="DATE" />
+   <result column="modify_date" property="modifyDate" jdbcType="DATE" />
+</resultMap>
+  
+   <select id="getOrganizationList" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT 
+    	organization_id,legal_person,member_number,found_date,modify_date
+   FROM 
+   		organization
+  </select>
+  <insert id="addOrganization" parameterType="com.asiainfo.baas.party.bean.Organization" >
+  	insert into 
+  		organization
+  	values
+  		(#{organizationId},#{legalPerson},#{memberNumber},#{foundDate},#{modifyDate})
+  </insert>
+  
+  <select id="getOrganizationById" parameterType="java.lang.String" resultMap="BaseResultMap">
+  	select 
+  		organization_id,legal_person,member_number,found_date,modify_date
+  	from 
+  		organization
+  	where organization_id=#{organizationId}
+  </select> 
+  
+  <update id="updateOrganization" parameterType="com.asiainfo.baas.party.bean.Organization">
+  
+  	update 
+  	
+  		organization 
+  	set 
+		legal_person =#{loginName},
+		
+		member_number = #{password},
+		
+		found_date = #{modifyDate},
+		
+		modify_date = #{status} 
+		
+		
+	where 
+		organization_id=#{partyId}
+		
+  </update>
+
+
+</mapper>
