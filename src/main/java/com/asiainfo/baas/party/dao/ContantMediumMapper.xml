@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.asiainfo.baas.party.dao.ContantMediumMapper">  <!--这个和我们的dao接口类的名称相同 -->
+	<resultMap id="BaseResultMap" type="com.asiainfo.baas.party.bean.ContantMedium">
+		<result column="contact_medium_id" property="contantMediumId" jdbcType="VARCHAR" />
+		<result column="contant_medium_type" property="contantMediumType" jdbcType="VARCHAR" /> 
+		<result column="contant_medium_value" property="contantMediumValue" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="VARCHAR" />
+		<result column="create_date" property="createDate" jdbcType="DATE" />
+		<result column="effective_date" property="effectiveDate" jdbcType="DATE" />
+		<result column="expire_date" property="expireDate" jdbcType="DATE" />
+	</resultMap>
+
+	<delete id="deleteContantMediumById" parameterType="java.lang.String">
+		delete
+		from
+		contant_medium
+		where contact_medium_id=#{contactMediumId}
+	</delete>
+	<insert id="createContantMedium" parameterType="com.asiainfo.baas.party.bean.ContantMedium">
+		insert into
+		contant_medium
+		values
+		(#{contantMediumId},#{contantMediumType},#{contantMediumValue},#{status},#{createDate},#{effectiveDate},#{expireDate})
+	</insert>
+
+	<select id="getContantMediumById" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		select
+			contact_medium_id,
+			contant_medium_type,
+			contant_medium_value,
+			status,
+			create_date,
+			effective_date,
+			expire_date
+		from
+			contant_medium
+		where
+			contact_medium_id=#{contantMediumId}
+	</select>
+	<update id="updateContantMediumById" parameterType="com.asiainfo.baas.party.bean.ContantMedium">
+		update
+		contant_medium
+		set
+		contant_medium_type=#{contantMediumType},
+		contant_medium_value=#{contantMediumValue},
+		status=#{status},
+		create_date=#{createDate},
+		effective_date=#{effectiveDate},
+		expire_date=#{expireDate},
+		where
+			contact_medium_id = #{contantMediumId}
+	</update>
+</mapper>
