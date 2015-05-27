@@ -27,7 +27,6 @@ public class PartySource {
 	
 	
 	@POST
-	@Path("/party")
 	@Consumes({ "application/json", "application/xml" })
 	public String registParty(Party party){
 		JSONObject result=new JSONObject();
