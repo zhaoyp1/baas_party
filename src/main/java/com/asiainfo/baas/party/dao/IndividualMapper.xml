@@ -9,18 +9,6 @@
 		<result column="modify_date" property="modifyDate" jdbcType="DATE" />
 	</resultMap>
 
-
-	<resultMap type="Employee" id="employeemap">
-		<id column="id" property="id" />
-		<result column="name" property="name" />
-		<association property="dept" column="dept_id" javaType="Department">
-			<id column="did" property="id" />
-			<result column="dname" property="name" />
-			<collection property="emps" column="dept_id" ofType="Employee"
-				resultMap="employeemap" />
-		</association>
-	</resultMap>
-
 	<select id="getIndividualById" parameterType="java.lang.String"
 		resultMap="BaseResultMap">
 		SELECT
