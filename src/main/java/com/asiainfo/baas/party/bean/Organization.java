@@ -20,10 +20,20 @@ public class Organization extends Party {
 	 * 创建时间
 	 */
 	private Date foundDate;
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
 	/**
 	 * 修改时间
 	 */
 	private Date modifyDate;
+	
+	private Date createDate;
 
 	public String getOrganizationId() {
 		return this.organizationId;

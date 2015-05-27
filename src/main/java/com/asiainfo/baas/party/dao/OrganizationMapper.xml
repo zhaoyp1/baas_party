@@ -7,11 +7,13 @@
    <result column="member_number" property="memberNumber" jdbcType="INTEGER" />
    <result column="found_date" property="foundDate" jdbcType="DATE" />
    <result column="modify_date" property="modifyDate" jdbcType="DATE" />
+   <result column="create_date" property="createDate" jdbcType="DATE" />
+   
 </resultMap>
   
    <select id="getOrganizationList" parameterType="java.lang.String" resultMap="BaseResultMap">
     SELECT 
-    	organization_id,legal_person,member_number,found_date,modify_date
+    	organization_id,legal_person,member_number,found_date,modify_date,create_date
    FROM 
    		organization
   </select>
@@ -19,12 +21,12 @@
   	insert into 
   		organization
   	values
-  		(#{organizationId},#{legalPerson},#{memberNumber},#{foundDate},#{modifyDate})
+  		(#{organizationId},#{legalPerson},#{memberNumber},#{foundDate},#{modifyDate},#{createDate})
   </insert>
   
   <select id="getOrganizationById" parameterType="java.lang.String" resultMap="BaseResultMap">
   	select 
-  		organization_id,legal_person,member_number,found_date,modify_date
+  		organization_id,legal_person,member_number,found_date,modify_date,create_date
   	from 
   		organization
   	where organization_id=#{organizationId}
