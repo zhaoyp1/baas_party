@@ -8,7 +8,7 @@ public class PartyRole {
 	private String partyId;
 	
 	/**
-	 * ï¿½ï¿½É«ID
+	 * ½ÇÉ«ID
 	 */
 	private String partyRoleId;
 	/**
@@ -19,6 +19,7 @@ public class PartyRole {
 	private java.util.Date modifyDate;
 	private String roleSpecId;
 	private List<ContantMedium> contantMediums;
+	private List<PartyRoleAssociation> partyRoleAssociations;
 
 	public String getPartyId() {
 		return this.partyId;
@@ -70,6 +71,18 @@ public class PartyRole {
 
 	public void setContantMediums(List<ContantMedium> comtantMediums) {
 		this.contantMediums = comtantMediums;
+	}
+
+	public String getPartyRoleId() {
+		return this.partyRoleId;
+	}
+
+	public List<PartyRoleAssociation> getPartyRoleAssociations() {
+		return this.partyRoleAssociations;
+	}
+
+	public void setPartyRoleAssociations(List<PartyRoleAssociation> partyRoleAssociations) {
+		this.partyRoleAssociations = partyRoleAssociations;
 	}
 
 }

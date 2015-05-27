@@ -7,8 +7,8 @@ public class Party {
 	/**
 	 * 角色
 	 */
-	List<PartyRole> partyRoles;
-	List<PartyName> partyNames;
+	private List<PartyRole> partyRoles;
+	private List<PartyName> partyNames;
 	/**
 	 * 参与人ID
 	 */
@@ -37,6 +37,8 @@ public class Party {
 	 * 参与人类行：个人或企业
 	 */
 	private String partyType;
+	
+	private List<PartyIdentification> partyIdentifications;
 
 	public List<PartyRole> getPartyRoles() {
 		return this.partyRoles;
@@ -108,6 +110,14 @@ public class Party {
 
 	public void setPartyType(String partyType) {
 		this.partyType = partyType;
+	}
+
+	public List<PartyIdentification> getPartyIdentifications() {
+		return this.partyIdentifications;
+	}
+
+	public void setPartyIdentifications(List<PartyIdentification> partyIdentifications) {
+		this.partyIdentifications = partyIdentifications;
 	}
 
 }

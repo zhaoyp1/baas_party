@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.asiainfo.baas.party.dao.PartyIdentificationMapper">  <!--这个和我们的dao接口类的名称相同 -->
+	<resultMap id="BaseResultMap" type="com.asiainfo.baas.party.bean.PartyIdentification">
+		<result column="partyIdentityId" property="individualId"
+			jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+		<result column="birthday" property="birthday" jdbcType="VARCHAR" />
+		<result column="modify_date" property="modifyDate" jdbcType="DATE" />
+	</resultMap>
+
+	<select id="getIndividualById" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		SELECT
+		individual_id,sex,birthday,modify_date
+		FROM
+		individual
+		WHERE
+		individual_id = #{id}
+	</select>
+	<insert id="createIndividual" parameterType="com.asiainfo.baas.party.bean.Individual">
+		insert into
+		individual
+		values
+		(#{individualId},#{sex},#{birthday},#{modifyDate})
+	</insert>
+	<insert id="updateIndividual" parameterType="com.asiainfo.baas.party.bean.Individual">
+		update
+		individual
+		<set>
+			<if test="sex != null">
+				sex = #{sex},
+			</if>
+			<if test="birthday != null">
+				birthday = #{birthday},
+			</if>
+			modify_date = sysdate()
+		</set>
+		where
+		individual_id = #{individualId}
+	</insert>
+
+</mapper>
