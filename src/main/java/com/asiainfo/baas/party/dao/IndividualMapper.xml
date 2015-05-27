@@ -7,12 +7,13 @@
 		<result column="sex" property="sex" jdbcType="VARCHAR" />
 		<result column="birthday" property="birthday" jdbcType="VARCHAR" />
 		<result column="modify_date" property="modifyDate" jdbcType="DATE" />
+		<result column="create_date" property="createDate" jdbcType="DATE" />
 	</resultMap>
 
 	<select id="getIndividualById" parameterType="java.lang.String"
 		resultMap="BaseResultMap">
 		SELECT
-		individual_id,sex,birthday,modify_date
+		individual_id,sex,birthday,modify_date,create_date
 		FROM
 		individual
 		WHERE
@@ -22,7 +23,7 @@
 		insert into
 		individual
 		values
-		(#{individualId},#{sex},#{birthday},#{modifyDate})
+		(#{individualId},#{sex},#{birthday},#{modifyDate},#{createDate})
 	</insert>
 	<insert id="updateIndividual" parameterType="com.asiainfo.baas.party.bean.Individual">
 		update
