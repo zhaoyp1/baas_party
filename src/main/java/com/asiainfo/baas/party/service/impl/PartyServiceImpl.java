@@ -1,5 +1,8 @@
 package com.asiainfo.baas.party.service.impl;
 
+import java.util.List;
+import java.util.regex.Pattern;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,8 +34,15 @@ public class PartyServiceImpl implements PartyService {
 	 * @param party
 	 */
 	public boolean validateLoginName(Party party) {
-		// TODO - implement PartyServiceImpl.validateLoginName
-		throw new UnsupportedOperationException();
+		boolean flag=false;
+		
+		if(party==null||"".equals(party.getLoginName())) return flag;
+		
+		String pattern="[a-zA-Z0-9@.-]+";
+		flag = Pattern.matches(pattern, party.getLoginName());
+		
+		return flag;
+
 	}
 
 	/**
@@ -40,8 +50,12 @@ public class PartyServiceImpl implements PartyService {
 	 * @param loginName
 	 */
 	public boolean checkLoginNameUniqueness(String loginName) {
-		// TODO - implement PartyServiceImpl.checkLoginNameUniqueness
-		throw new UnsupportedOperationException();
+		List<Party> partyNames=partyDao.getPartyByLoginName(loginName);
+		if(partyNames==null || partyNames.size()<=0){
+			return true;
+		}
+		return false;
+		
 	}
 
 }

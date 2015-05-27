@@ -16,5 +16,7 @@ public interface PartyMapper {
 	
 	public void  delParty(String partyId);
 	
+	public List<Party> getPartyByLoginName(String loginName);
+	
 
 }
