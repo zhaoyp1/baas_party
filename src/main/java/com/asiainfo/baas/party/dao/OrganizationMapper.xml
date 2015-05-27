@@ -38,17 +38,17 @@
   	
   		organization 
   	set 
-		legal_person =#{loginName},
+		legal_person =#{legalPerson},
 		
-		member_number = #{password},
+		member_number = #{memberNumber},
 		
-		found_date = #{modifyDate},
+		found_date = #{foundDate},
 		
-		modify_date = #{status} 
+		modify_date = #{modifyDate} 
 		
 		
 	where 
-		organization_id=#{partyId}
+		organization_id=#{organizationId}
 		
   </update>
 

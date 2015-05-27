@@ -55,7 +55,7 @@ public class JUnitTest {
 		partyName.setPartyId("1");
 		partyName.setName("Test2");
 		partyName.setLanguageType("2");
-		partyName.setPartyNameId("2");
+		partyName.setPartyNameId("5");
 		partyName.setCreateDate(new Date());
 		partyName.setModifyDate(new Date());
 		partyName.setStatus("U");
