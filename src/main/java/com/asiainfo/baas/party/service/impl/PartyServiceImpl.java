@@ -47,14 +47,14 @@ public class PartyServiceImpl implements PartyService {
 			party.setCreateDate(createDate);
 			partyDao.addParty(party);
 		
-			//¸öÈË¶©»§
+			//ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½
 			if(PartyConst.partyTypeIndividual.equals(party.getPartyType())){
 				Individual individual = new Individual();
 				individual.setIndividualId(id);
 				individual.setCreateDate(createDate);
 				indivDao.createIndividual(individual);
 			}else if(PartyConst.partyTypeOrganization.equals(party.getPartyType())){
-				//×éÖ¯¶©»§
+				//ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½
 				Organization organization = new Organization();
 				organization.setOrganizationId(id);
 				organization.setCreateDate(createDate);
@@ -71,7 +71,7 @@ public class PartyServiceImpl implements PartyService {
 		}
 
 	/**
-	 * ÑéÖ¤µÇÂ¼ÃûÊÇ·ñ·ûºÏ¹æÔò
+	 * ï¿½ï¿½Ö¤ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ï¿½
 	 * @param party
 	 */
 	public boolean validateLoginName(Party party) {
@@ -87,7 +87,7 @@ public class PartyServiceImpl implements PartyService {
 	}
 
 	/**
-	 * ¼ì²éÓÃ»§ÊÇ·ñÎ¨Ò»
+	 * ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ç·ï¿½Î¨Ò»
 	 * @param loginName
 	 */
 	public boolean checkLoginNameUniqueness(String loginName) {
@@ -99,14 +99,14 @@ public class PartyServiceImpl implements PartyService {
 		
 	}
 	/**
-	 * ÐÞ¸Ä¸öÈË¶©»§ÐÅÏ¢
+	 * ï¿½Þ¸Ä¸ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	 * @param individual
 	 */
 	public void modifyIndividual(Individual individual) {
 		indivDao.updateIndividual(individual);
 	}
 	/**
-	 * ÐÞ¸Ä×éÖ¯ÐÅÏ¢
+	 * ï¿½Þ¸ï¿½ï¿½ï¿½Ö¯ï¿½ï¿½Ï¢
 	 * @param organization
 	 */
 	 
@@ -115,11 +115,11 @@ public class PartyServiceImpl implements PartyService {
 	}
 	
 	/**
-	 * ±£´æÖ¤¼þÐÅÏ¢
+	 * ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½Ï¢
 	 * @param identification
 	 */
-	public void saveIdentification(PartyIdentification partyIdentification) {
-		partyIdenDao.createPartyIdentification(partyIdentification);
+	public void saveIdentification(PartyIdentification identification) {
+		partyIdenDao.createPartyIdentification(identification);
 	}
 
 }

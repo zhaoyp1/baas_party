@@ -11,31 +11,31 @@ public interface PartyService {
 	void createParty(Party party);
 
 	/**
-	 * ÑéÖ¤µÇÂ¼ÃûÊÇ·ñ·ûºÏ¹æÔò
+	 * ï¿½ï¿½Ö¤ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ï¿½
 	 * @param party
 	 */
 	boolean validateLoginName(Party party);
 
 	/**
-	 * ¼ì²éÓÃ»§ÊÇ·ñÎ¨Ò»
+	 * ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ç·ï¿½Î¨Ò»
 	 * @param loginName
 	 */
 	boolean checkLoginNameUniqueness(String loginName);
 	
 	/**
-	 * ÐÞ¸Ä¸öÈË¶©»§ÐÅÏ¢
+	 * ï¿½Þ¸Ä¸ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	 * @param individual
 	 */
 	void modifyIndividual(Individual individual);
 
 	/**
-	 * ÐÞ¸Ä×éÖ¯ÐÅÏ¢
+	 * ï¿½Þ¸ï¿½ï¿½ï¿½Ö¯ï¿½ï¿½Ï¢
 	 * @param organization
 	 */
 	void modifyOrganization(Organization organization);
 
 	/**
-	 * ±£´æÖ¤¼þÐÅÏ¢
+	 * ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½Ï¢
 	 * @param identification
 	 */
 	void saveIdentification(PartyIdentification identification);
