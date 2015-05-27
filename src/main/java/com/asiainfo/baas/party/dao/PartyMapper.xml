@@ -33,6 +33,14 @@
   	where party_id=#{partyId}
   </select> 
   
+  <select id="getPartyByLoginName" parameterType="java.lang.String" resultMap="BaseResultMap1">
+  	select 
+  		party_id,login_name,password,create_date,modify_date,status,party_type 
+  	from 
+  		party
+  	where login_name=#{loginName}
+  </select> 
+  
   <update id="updateParty" parameterType="com.asiainfo.baas.party.bean.Party">
   
   	update 
@@ -58,7 +66,7 @@
 	  	
 	  		party 
 	  	set 
-			 status=0
+			 status=2
 			
 		where 
 			party_id=#{partyId}
