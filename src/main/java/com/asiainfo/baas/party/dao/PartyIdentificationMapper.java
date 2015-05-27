@@ -5,7 +5,7 @@ import java.util.List;
 import com.asiainfo.baas.party.bean.PartyIdentification;
 
 public interface PartyIdentificationMapper {
-	
+	 
 	
 	public List<PartyIdentification> getPartyIdentificationByPartyId(String parttyId);
 	

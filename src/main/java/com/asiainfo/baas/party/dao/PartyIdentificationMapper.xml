@@ -29,7 +29,7 @@
 	
 	<update id="updatePartyIdentification" parameterType="com.asiainfo.baas.party.bean.PartyIdentification">
 		update
-		
+		 
 			party_identification
 			
 		 set 
