@@ -1,23 +1,22 @@
 package com.asiainfo.baas.party.bean;
 
-import java.util.*;
+import java.util.Date;
 
 /**
- * ÁªÏµÃ½½é
+ * ï¿½ï¿½ÏµÃ½ï¿½ï¿½
  */
 public class ContantMedium {
 
-	private List<PartyRole> partyRoles;
 	/**
-	 * ÁªÏµÃ½½éID
+	 * ï¿½ï¿½ÏµÃ½ï¿½ï¿½ID
 	 */
 	private String contantMediumId;
 	/**
-	 * ÁªÏµÃ½½éÀàÐÍ
+	 * ï¿½ï¿½ÏµÃ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	private String contantMediumType;
 	/**
-	 * ÁªÏµÃ½½éÄÚÈÝ
+	 * ï¿½ï¿½ÏµÃ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	private String contantMediumValue;
 	/**
@@ -25,25 +24,17 @@ public class ContantMedium {
 	 */
 	private String status;
 	/**
-	 * ´´½¨ÈÕÆÚ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	private Date createDate;
 	/**
-	 * ÉúÐ§Ê±¼ä
+	 * ï¿½ï¿½Ð§Ê±ï¿½ï¿½
 	 */
 	private Date effectiveDate;
 	/**
-	 * Ê§Ð§Ê±¼ä
+	 * Ê§Ð§Ê±ï¿½ï¿½
 	 */
 	private Date expireDate;
-
-	public List<PartyRole> getPartyRoles() {
-		return this.partyRoles;
-	}
-
-	public void setPartyRoles(List<PartyRole> partyRoles) {
-		this.partyRoles = partyRoles;
-	}
 
 	public String getContantMediumId() {
 		return this.contantMediumId;
