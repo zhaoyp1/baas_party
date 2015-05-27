@@ -2,42 +2,49 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.asiainfo.baas.party.dao.PartyIdentificationMapper">  <!--这个和我们的dao接口类的名称相同 -->
 	<resultMap id="BaseResultMap" type="com.asiainfo.baas.party.bean.PartyIdentification">
-		<result column="partyIdentityId" property="individualId"
-			jdbcType="VARCHAR" />
-		<result column="sex" property="sex" jdbcType="VARCHAR" />
-		<result column="birthday" property="birthday" jdbcType="VARCHAR" />
-		<result column="modify_date" property="modifyDate" jdbcType="DATE" />
+		<result column="partyIdentityId" property="party_identity_id" jdbcType="VARCHAR" />
+		<result column="identityCode" property="identity_code" jdbcType="VARCHAR" />
+		<result column="partyId" property="party_id" jdbcType="VARCHAR" />
+		<result column="createDate" property="create_date" jdbcType="DATE" />
+		<result column="modityDate" property="modify_date" jdbcType="DATE" />
+		<result column="certEffdate" property="cert_effdate" jdbcType="DATE" />
+		<result column="certExpireDate" property="cert_expireDate" jdbcType="DATE" />
 	</resultMap>
 
-	<select id="getIndividualById" parameterType="java.lang.String"
-		resultMap="BaseResultMap">
+	<select id="getPartyIdentificationByPartyId" parameterType="java.lang.String" resultMap="BaseResultMap">
 		SELECT
-		individual_id,sex,birthday,modify_date
+			party_identity_id,identity_code,party_id,create_date,modify_date,cert_effdate,cert_expireDate
 		FROM
-		individual
+			party_identification
 		WHERE
-		individual_id = #{id}
+			party_id = #{partyId}
 	</select>
-	<insert id="createIndividual" parameterType="com.asiainfo.baas.party.bean.Individual">
+	
+	<insert id="createPartyIdentification" parameterType="com.asiainfo.baas.party.bean.PartyIdentification">
 		insert into
-		individual
+			party_identification
 		values
-		(#{individualId},#{sex},#{birthday},#{modifyDate})
+			(#{partyIdentityId},#{identityCode},#{partyId},#{createDate},#{modityDate},#{certEffdate},#{certExpireDate})
 	</insert>
-	<insert id="updateIndividual" parameterType="com.asiainfo.baas.party.bean.Individual">
+	
+	<update id="updatePartyIdentification" parameterType="com.asiainfo.baas.party.bean.PartyIdentification">
 		update
-		individual
-		<set>
-			<if test="sex != null">
-				sex = #{sex},
-			</if>
-			<if test="birthday != null">
-				birthday = #{birthday},
-			</if>
-			modify_date = sysdate()
-		</set>
+		
+			party_identification
+			
+		 set 
+		 	identity_code = #{identityCode},
+		 	
+		 	party_id = #{partyId},
+		 	
+		 	modify_date = #{modityDate},
+		 	
+		 	cert_effdate = #{certEffdate},
+		 	
+		 	cert_expireDate = #{certExpireDate}
+		 	
 		where
-		individual_id = #{individualId}
-	</insert>
+			party_identity_id = #{partyIdentityId}
+	</update>
 
-</mapper>
+</mapper> 
