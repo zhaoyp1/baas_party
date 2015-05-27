@@ -39,5 +39,11 @@ public interface PartyService {
 	 * @param identification
 	 */
 	void saveIdentification(PartyIdentification identification);
+	
+	/**
+	 * ����partyName
+	 * @param paryName
+	 */
+	public void createPartyName(PartyName partyName);
 
 }
