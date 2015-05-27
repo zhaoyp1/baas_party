@@ -48,8 +48,6 @@ public class TestOrganizationUnit {
 //		org.setLegalPerson("’‘‘∆∆º");
 //		org.setMemberNumber(3);
 		org=organizeDao.getOrganizationById("18a377ed-c732-4a72-af37-5b6a83ca3ee2");
-		
-		
 	}
 	
 	

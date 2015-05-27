@@ -26,4 +26,22 @@ public class PartyServiceImpl implements PartyService {
 			partyDao.addParty(party);
 		}
 
+	/**
+	 * 验证登录名是否符合规则
+	 * @param party
+	 */
+	public boolean validateLoginName(Party party) {
+		// TODO - implement PartyServiceImpl.validateLoginName
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 检查用户是否唯一
+	 * @param loginName
+	 */
+	public boolean checkLoginNameUniqueness(String loginName) {
+		// TODO - implement PartyServiceImpl.checkLoginNameUniqueness
+		throw new UnsupportedOperationException();
+	}
+
 }
