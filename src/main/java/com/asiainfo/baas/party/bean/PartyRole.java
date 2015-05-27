@@ -1,12 +1,9 @@
 package com.asiainfo.baas.party.bean;
 
-import java.util.Date;
 import java.util.*;
 
 public class PartyRole {
 
-	private String partyId;
-	
 	/**
 	 * ½ÇÉ«ID
 	 */
@@ -18,15 +15,11 @@ public class PartyRole {
 	private java.util.Date createDate;
 	private java.util.Date modifyDate;
 	private String roleSpecId;
-	private List<ContantMedium> contantMediums;
+	private String partyId;
 	private List<PartyRoleAssociation> partyRoleAssociations;
 
-	public String getPartyId() {
-		return this.partyId;
-	}
-
-	public void setPartyId(String partyId) {
-		this.partyId = partyId;
+	public String getPartyRoleId() {
+		return this.partyRoleId;
 	}
 
 	public void setPartyRoleId(String partyRoleId) {
@@ -65,16 +58,12 @@ public class PartyRole {
 		this.roleSpecId = roleSpecId;
 	}
 
-	public List<ContantMedium> getContantMediums() {
-		return this.contantMediums;
+	public String getPartyId() {
+		return this.partyId;
 	}
 
-	public void setContantMediums(List<ContantMedium> comtantMediums) {
-		this.contantMediums = comtantMediums;
-	}
-
-	public String getPartyRoleId() {
-		return this.partyRoleId;
+	public void setPartyId(String partyId) {
+		this.partyId = partyId;
 	}
 
 	public List<PartyRoleAssociation> getPartyRoleAssociations() {
