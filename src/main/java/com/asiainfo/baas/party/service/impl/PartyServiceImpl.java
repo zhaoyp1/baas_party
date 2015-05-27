@@ -108,6 +108,7 @@ public class PartyServiceImpl implements PartyService {
 	 * @param individual
 	 */
 	public void modifyIndividual(Individual individual) {
+		individual.setModifyDate(new Date());
 		indivDao.updateIndividual(individual);
 	}
 	/**
@@ -116,6 +117,7 @@ public class PartyServiceImpl implements PartyService {
 	 */
 	 
 	public void modifyOrganization(Organization organization) {
+		organization.setModifyDate(new Date());
 		organDao.updateOrganization(organization);
 	}
 	
@@ -126,6 +128,8 @@ public class PartyServiceImpl implements PartyService {
 	public void saveIdentification(PartyIdentification identification) {
 		String id=CommonUtil.getGenerateId();
 		identification.setPartyIdentityId(id);
+		identification.setCreateDate(new Date());
+		identification.setModityDate(new Date());
 		partyIdenDao.createPartyIdentification(identification);
 	}
 
@@ -137,6 +141,8 @@ public class PartyServiceImpl implements PartyService {
 		String id=CommonUtil.getGenerateId();
 		partyName.setPartyNameId(id);
 		partyName.setStatus(PartyConst.CommonStatus_1);
+		partyName.setCreateDate(new Date());
+		partyName.setModifyDate(new Date());
 		partyNameDao.addPartyName(partyName);
 	}
 
