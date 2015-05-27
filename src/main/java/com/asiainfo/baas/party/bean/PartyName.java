@@ -4,22 +4,22 @@ import java.util.Date;
 
 public class PartyName {
 
-	Party partyId;
+	private String partyId;
 	/**
-	 * ÓïÑÔÀàÐÍ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	private String languageType;
 	/**
-	 * ²ÎÓëÈËÃû³Æ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	private String name;
 	private String partyNameId;
 	/**
-	 * ´´½¨Ê±¼ä
+	 * ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 	 */
 	private Date createDate;
 	/**
-	 * ÐÞ¸ÄÊ±¼ä
+	 * ï¿½Þ¸ï¿½Ê±ï¿½ï¿½
 	 */
 	private Date modifyDate;
 	/**
@@ -27,11 +27,11 @@ public class PartyName {
 	 */
 	private String status;
 
-	public Party getPartyId() {
+	public String getPartyId() {
 		return this.partyId;
 	}
 
-	public void setPartyId(Party partyId) {
+	public void setPartyId(String partyId) {
 		this.partyId = partyId;
 	}
 

@@ -4,24 +4,25 @@ import java.util.Date;
 
 public class PartyRole {
 
-	private Party partyId;
+	private String partyId;
+	
 	/**
-	 * ��ɫID
+	 * ��ɫID
 	 */
 	private String partyRoleId;
 	/**
-	 * ��ɫ״̬
+	 * ��ɫ״̬
 	 */
 	private String status;
 	private Date createDate;
 	private Date modifyDate;
 	private String roleSpecId;
 
-	public Party getPartyId() {
+	public String getPartyId() {
 		return this.partyId;
 	}
 
-	public void setPartyId(Party partyId) {
+	public void setPartyId(String partyId) {
 		this.partyId = partyId;
 	}
 
