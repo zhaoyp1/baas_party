@@ -1,6 +1,7 @@
 package com.asiainfo.baas.party.bean;
 
 import java.util.Date;
+import java.util.*;
 
 public class PartyRole {
 
@@ -14,9 +15,10 @@ public class PartyRole {
 	 * ��ɫ״̬
 	 */
 	private String status;
-	private Date createDate;
-	private Date modifyDate;
+	private java.util.Date createDate;
+	private java.util.Date modifyDate;
 	private String roleSpecId;
+	private List<ContantMedium> contantMediums;
 
 	public String getPartyId() {
 		return this.partyId;
@@ -38,19 +40,19 @@ public class PartyRole {
 		this.status = status;
 	}
 
-	public Date getCreateDate() {
+	public java.util.Date getCreateDate() {
 		return this.createDate;
 	}
 
-	public void setCreateDate(Date createDate) {
+	public void setCreateDate(java.util.Date createDate) {
 		this.createDate = createDate;
 	}
 
-	public Date getModifyDate() {
+	public java.util.Date getModifyDate() {
 		return this.modifyDate;
 	}
 
-	public void setModifyDate(Date modifyDate) {
+	public void setModifyDate(java.util.Date modifyDate) {
 		this.modifyDate = modifyDate;
 	}
 
@@ -60,6 +62,14 @@ public class PartyRole {
 
 	public void setRoleSpecId(String roleSpecId) {
 		this.roleSpecId = roleSpecId;
+	}
+
+	public List<ContantMedium> getContantMediums() {
+		return this.contantMediums;
+	}
+
+	public void setContantMediums(List<ContantMedium> comtantMediums) {
+		this.contantMediums = comtantMediums;
 	}
 
 }
