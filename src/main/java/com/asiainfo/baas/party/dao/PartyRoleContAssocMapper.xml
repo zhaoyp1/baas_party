@@ -22,7 +22,7 @@
 	</insert>
 
 	<select id="getPartyRoleContAssocByPartyRoleId" parameterType="java.lang.String"
-		resultMap="java.util.List">
+		resultMap="BaseResultMap">
 		select
 			party_role_cont_id,
 			party_role_id,
