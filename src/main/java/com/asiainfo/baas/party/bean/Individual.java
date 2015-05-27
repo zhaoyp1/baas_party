@@ -20,6 +20,16 @@ public class Individual extends Party {
 	 * ÐÞ¸ÄÊ±¼ä
 	 */
 	private Date modifyDate;
+	
+	private Date createDate;
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
 
 	public String getIndividualId() {
 		return this.individualId;
