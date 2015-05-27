@@ -40,9 +40,10 @@
   	update
   		party_name
   	set 
-  	party_id=#{partyId},
-  	language_type=#{languageType},
-  	modify_date=#{modifyDate},
-  	name=#{name}
+	  	party_id=#{partyId},
+	  	language_type=#{languageType},
+	  	modify_date=#{modifyDate},
+	  	name=#{name}
+  	where party_name_id=#{partyNameId}
   </update>
 </mapper>

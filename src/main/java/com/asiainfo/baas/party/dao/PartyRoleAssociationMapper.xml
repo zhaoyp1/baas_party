@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.asiainfo.baas.party.dao.PartyRoleAssociationMapper">  <!--这个和我们的dao接口类的名称相同 -->
+	<resultMap id="BaseResultMap" type="com.asiainfo.baas.party.bean.PartyRoleAssociation">
+		<result column="party_role_id" property="partyRoleId" jdbcType="VARCHAR" />
+		<result column="rel_party_role_id" property="relPartyRoleId" jdbcType="VARCHAR" /> 
+		<result column="status" property="status" jdbcType="VARCHAR" />
+		<result column="create_date" property="createDate" jdbcType="DATE" />
+		<result column="modify_date" property="modifyDate" jdbcType="DATE" />
+		<result column="association_id" property="associationId" jdbcType="VARCHAR" />
+		<result column="association_type" property="associationType" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<delete id="delPartyRoleAssoByAssociationId" parameterType="java.lang.String">
+		delete
+		from
+		party_role_association
+		where association_id=#{associationId}
+	</delete>
+	<insert id="addPartyRoleAssociation" parameterType="com.asiainfo.baas.party.bean.PartyRoleAssociation">
+		insert into
+		party_role_association
+		values
+		(#{associationId},#{associationType},#{partyRoleId},#{relPartyRoleId},#{status},#{createDate},#{modifyDate})
+	</insert>
+
+	<select id="getPartyRolesAssoByPartyRoleId" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		select
+		association_id,
+		association_type,
+		party_role_id,
+		rel_party_role_id,
+		status,
+		create_date,
+		modify_date
+		from
+		party_role_association
+		where party_role_id=#{partyRoleId}
+	</select>
+	<update id="updatePartyRoleAssociation" parameterType="com.asiainfo.baas.party.bean.PartyRoleAssociation">
+		update
+		party_role_association
+		set
+		party_role_id=#{partyRoleId},
+		rel_party_role_id=#{relPartyRoleId},
+		association_type=#{associationType},
+		status=#{status},
+		modify_date=#{modifyDate}
+		where association_id=#{associationId}
+	</update>
+</mapper>
