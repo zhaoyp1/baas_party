@@ -11,11 +11,13 @@ import com.asiainfo.baas.party.bean.Individual;
 import com.asiainfo.baas.party.bean.Organization;
 import com.asiainfo.baas.party.bean.Party;
 import com.asiainfo.baas.party.bean.PartyIdentification;
+import com.asiainfo.baas.party.bean.PartyName;
 import com.asiainfo.baas.party.bean.PartyRole;
 import com.asiainfo.baas.party.dao.IndividualMapper;
 import com.asiainfo.baas.party.dao.OrganizationMapper;
 import com.asiainfo.baas.party.dao.PartyIdentificationMapper;
 import com.asiainfo.baas.party.dao.PartyMapper;
+import com.asiainfo.baas.party.dao.PartyNameMapper;
 import com.asiainfo.baas.party.dao.PartyRoleMapper;
 import com.asiainfo.baas.party.service.PartyService;
 import com.asiainfo.baas.party.util.CommonUtil;
@@ -33,6 +35,8 @@ public class PartyServiceImpl implements PartyService {
 		private OrganizationMapper organDao;
 		@Autowired
 		private PartyIdentificationMapper partyIdenDao;
+		@Autowired
+		private PartyNameMapper partyNameDao;
 	
 		/**
 		 * 
@@ -67,11 +71,12 @@ public class PartyServiceImpl implements PartyService {
 			partyRole.setModifyDate(createDate);
 			partyRole.setCreateDate(createDate);
 			partyRole.setStatus(PartyConst.CommonStatus_1);
+			partyRole.setRoleSpecId(PartyConst.partyRoleSpecSubscriber);
 			partyRoleDao.addPartyRole(partyRole);
 		}
 
 	/**
-	 * ��֤��¼���Ƿ���Ϲ���
+	 * ��֤��¼���Ƿ���Ϲ���?
 	 * @param party
 	 */
 	public boolean validateLoginName(Party party) {
@@ -87,7 +92,7 @@ public class PartyServiceImpl implements PartyService {
 	}
 
 	/**
-	 * ����û��Ƿ�Ψһ
+	 * ����û��Ƿ�Ψ�?
 	 * @param loginName
 	 */
 	public boolean checkLoginNameUniqueness(String loginName) {
@@ -119,7 +124,20 @@ public class PartyServiceImpl implements PartyService {
 	 * @param identification
 	 */
 	public void saveIdentification(PartyIdentification identification) {
+		String id=CommonUtil.getGenerateId();
+		identification.setPartyIdentityId(id);
 		partyIdenDao.createPartyIdentification(identification);
+	}
+
+	/**
+	 * ����partyName
+	 * @param paryName
+	 */
+	public void createPartyName(PartyName partyName) {
+		String id=CommonUtil.getGenerateId();
+		partyName.setPartyNameId(id);
+		partyName.setStatus(PartyConst.CommonStatus_1);
+		partyNameDao.addPartyName(partyName);
 	}
 
 }
