@@ -30,8 +30,9 @@ public class PartySource {
 	@Consumes({ "application/json", "application/xml" })
 	public String registParty(Party party){
 		JSONObject result=new JSONObject();
-		String code="";
-		String mseg="";
+		String code="200";
+		String mseg="OK";
+		String id="";
 		
 		if(party==null||"".equals(party.getLoginName())||"".equals(party.getPassword())||"".equals(party.getPartyType())){
 			code="500";
@@ -47,9 +48,8 @@ public class PartySource {
 				
 				 flag=partyService.checkLoginNameUniqueness(loginName);
 				if(flag){
-					partyService.createParty(party);
-					code="200";
-					mseg="OK";
+					 id=partyService.createParty(party);
+				 
 				}else{
 					code="500";
 					mseg="µÇÂ¼ÃûÒÑ´æÔÚ";
@@ -58,6 +58,7 @@ public class PartySource {
 		}
 		result.put("CODE", code);
 		result.put("MSEG", mseg);
+		result.put("ID",id);
 		return result.toString();
 	}
 	
