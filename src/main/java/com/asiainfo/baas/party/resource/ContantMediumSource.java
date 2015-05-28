@@ -25,7 +25,6 @@ public class ContantMediumSource {
 
 
     @POST
-    @Path("/contantMedium")
     @Consumes({ "application/json", "application/xml" })
     public String saveContantMedium(ContantMediumRestBean bean) {
         JSONObject result = new JSONObject();
@@ -45,6 +44,7 @@ public class ContantMediumSource {
                     || StringUtils.isEmpty(contantMedium.getContantMediumValue())) {
                 result.put("code", "500");
                 result.put("mseg", "参数不合法！");
+                return result.toString();
             }
         }
 

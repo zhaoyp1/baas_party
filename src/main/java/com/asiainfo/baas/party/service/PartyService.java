@@ -8,7 +8,7 @@ public interface PartyService {
 	 * 
 	 * @param party
 	 */
-	void createParty(Party party);
+	String createParty(Party party);
 
 	/**
 	 * ��֤��¼���Ƿ���Ϲ���

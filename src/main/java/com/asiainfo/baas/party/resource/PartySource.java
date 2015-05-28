@@ -27,7 +27,6 @@ public class PartySource {
 	
 	
 	@POST
-	@Path("/party")
 	@Consumes({ "application/json", "application/xml" })
 	public String registParty(Party party){
 		JSONObject result=new JSONObject();
@@ -49,7 +48,7 @@ public class PartySource {
 				 flag=partyService.checkLoginNameUniqueness(loginName);
 				if(flag){
 					partyService.createParty(party);
-					code="0";
+					code="200";
 					mseg="OK";
 				}else{
 					code="500";

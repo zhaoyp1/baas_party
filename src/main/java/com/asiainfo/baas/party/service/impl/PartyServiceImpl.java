@@ -42,7 +42,7 @@ public class PartyServiceImpl implements PartyService {
 		 * 
 		 * @param party
 		 */
-		public void createParty(Party party) {
+		public String createParty(Party party) {
 			
 			String id=CommonUtil.getGenerateId();
 			Date createDate = new Date();
@@ -73,6 +73,7 @@ public class PartyServiceImpl implements PartyService {
 			partyRole.setStatus(PartyConst.CommonStatus_1);
 			partyRole.setRoleSpecId(PartyConst.partyRoleSpecSubscriber);
 			partyRoleDao.addPartyRole(partyRole);
+			return id;
 		}
 
 	/**
