@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.asiainfo.baas.party.bean.Party;
 import com.asiainfo.baas.party.dao.PartyMapper;
+import com.asiainfo.baas.party.service.PartyService;
 import com.asiainfo.baas.party.util.CommonUtil;
 
 @RunWith(SpringJUnit4ClassRunner.class) // ÕûºÏ 
@@ -20,6 +21,8 @@ public class TestUnit {
 	
 	@Autowired
 	private PartyMapper partyDao;
+	@Autowired
+	private PartyService partyService;
 	
 	@Test
 	public void testPartyDao(){
@@ -54,6 +57,14 @@ public class TestUnit {
 		Party party=partyDao.getPartyById("31bb7f79-5efc-43b5-ab61-1c5e08373fa2");
 		party.setLoginName("zhaoyp");
 		partyDao.delParty("31bb7f79-5efc-43b5-ab61-1c5e08373fa2");
+	}
+	@Test
+	public void testValidate(){
+		Party party=new Party();
+		party.setLoginName("123qwe@#");
+		//partyService.validateLoginName(party);
+		boolean flag=partyService.checkLoginNameUniqueness("zhaoyp");
+		
 	}
 
 }
