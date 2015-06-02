@@ -8,6 +8,7 @@ public class Individual extends Party {
 	 * 个人ID
 	 */
 	private String individualIdac;
+
 	/**
 	 * 性别
 	 */
