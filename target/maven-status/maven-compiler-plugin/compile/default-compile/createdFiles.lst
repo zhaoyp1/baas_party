@@ -1,0 +1,14 @@
+com\asiainfo\baas\party\service\impl\PersonServiceImpl.class
+com\asiainfo\baas\party\bean\Party.class
+com\asiainfo\baas\party\bean\PartyRole.class
+com\asiainfo\baas\party\util\CommonUtil.class
+com\asiainfo\baas\party\service\impl\PartyServiceImpl.class
+com\asiainfo\baas\party\bean\PartyName.class
+com\asiainfo\baas\party\service\PersonService.class
+com\asiainfo\baas\party\bean\Person.class
+com\asiainfo\baas\party\bean\Individual.class
+com\asiainfo\baas\party\resource\PersonSource.class
+com\asiainfo\baas\party\service\PartyService.class
+com\asiainfo\baas\party\bean\Organization.class
+com\asiainfo\baas\party\dao\PartyMapper.class
+com\asiainfo\baas\party\dao\PersonMapper.class

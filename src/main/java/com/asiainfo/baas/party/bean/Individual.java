@@ -8,7 +8,7 @@ public class Individual extends Party {
 	 * ¸öÈËID
 	 */
 
-	private String individualIdB;
+	private String individualId;
 
 
 	/**
