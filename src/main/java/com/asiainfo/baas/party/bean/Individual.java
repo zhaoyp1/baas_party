@@ -14,7 +14,7 @@ public class Individual extends Party {
 	/**
 	 * 性别
 	 */
-	private String sexw;
+	private String sexww;
 	/**
 	 * 出生日期
 	 */
