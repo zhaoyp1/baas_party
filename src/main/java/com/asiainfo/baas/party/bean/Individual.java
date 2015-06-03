@@ -8,13 +8,13 @@ public class Individual extends Party {
 	 * 个人ID
 	 */
 
-	private String individualId;
+	private String individualIdB;
 
 
 	/**
 	 * 性别
 	 */
-	private String sex;
+	private String sexb;
 	/**
 	 * 出生日期
 	 */
