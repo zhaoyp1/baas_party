@@ -1,4 +1,4 @@
-package com.asiainfo.baas.party.bean;
+﻿package com.asiainfo.baas.party.bean;
 
 import java.util.Date;
 
@@ -10,7 +10,7 @@ public class ContantMedium {
 	/**
 	 * ��ϵý��ID
 	 */
-	private String contantMediumId;
+	private String contantMediumId454;
 	/**
 	 * ��ϵý������
 	 */
