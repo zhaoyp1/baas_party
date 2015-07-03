@@ -10,7 +10,11 @@ public class ContantMedium {
 	/**
 	 * ��ϵý��ID
 	 */
+
 	private String contantMediumId13;
+
+
+
 	/**
 	 * ��ϵý������
 	 */
