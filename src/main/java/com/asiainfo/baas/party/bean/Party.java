@@ -4,30 +4,18 @@ import java.util.*;
 
 public class Party {
 
-	/**
-	 * ��ɫ
-	 */
+	 
 	private List<PartyRole> partyRoles;
 	private List<PartyName> partyNames;
-	/**
-	 * ������ID
-	 */
+	 
 	private String partyId;
-	/**
-	 * ��¼�˺�
-	 */
+	 
 	private String loginName;
-	/**
-	 * ��¼����
-	 */
+	 
 	private String password;
-	/**
-	 * ����ʱ��
-	 */
+	 
 	private Date createDate;
-	/**
-	 * �޸�ʱ��
-	 */
+	 
 	private Date modifyDate;
 	/**
 	 * ״̬

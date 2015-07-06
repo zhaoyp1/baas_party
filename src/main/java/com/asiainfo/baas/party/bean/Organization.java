@@ -62,6 +62,10 @@ public class Organization extends Party {
 	public Date getFoundDate() {
 		return this.foundDate;
 	}
+	
+	public String toString(){
+		return "";
+	}
 
 	public void setFoundDate(Date foundDate) {
 		this.foundDate = foundDate;

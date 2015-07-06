@@ -7,9 +7,6 @@ public class ContantMedium {
 	 
 	private String contantMediumId;
 
-
-
-	 
 	private String contantMediumType;
 	 
 	private String contantMediumValue;
