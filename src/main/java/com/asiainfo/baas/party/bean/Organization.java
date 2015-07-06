@@ -5,19 +5,20 @@ import java.util.Date;
 public class Organization extends Party {
 
 	/**
-	 * ×éÖ¯ID
+	 * ï¿½ï¿½Ö¯ID
 	 */
 	private String organizationId;
+	private String name;
 	/**
-	 * ·¨ÈËÃû³Æ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	private String legalPerson;
 	/**
-	 * ³ÉÔ±ÈËÊý
+	 * ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½
 	 */
 	private int memberNumber;
 	/**
-	 * ´´½¨Ê±¼ä
+	 * ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 	 */
 	private Date foundDate;
 	public Date getCreateDate() {
@@ -29,7 +30,7 @@ public class Organization extends Party {
 	}
 
 	/**
-	 * ÐÞ¸ÄÊ±¼ä
+	 * ï¿½Þ¸ï¿½Ê±ï¿½ï¿½
 	 */
 	private Date modifyDate;
 	
@@ -79,4 +80,15 @@ public class Organization extends Party {
 		this.modifyDate = modifyDate;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void getOrg(){
+		System.out.println("========getOrg");
+	}
 }
