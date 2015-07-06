@@ -65,7 +65,10 @@ public class Organization extends Party {
 	}
 	
 	public String toString(){
-		return "";
+		String str="abc";
+		System.out.println(str);
+		System.out.println(this.legalPerson);
+		return "str";
 	}
 
 	public void setFoundDate(Date foundDate) {
