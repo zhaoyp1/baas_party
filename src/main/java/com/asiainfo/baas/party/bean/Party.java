@@ -5,28 +5,28 @@ import java.util.*;
 public class Party {
 
 	/**
-	 * ½ÇÉ«
+	 * ï¿½ï¿½É«
 	 */
 	private List<PartyRole> partyRoles;
 	private List<PartyName> partyNames;
 	/**
-	 * ²ÎÓëÈËID
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID
 	 */
 	private String partyId;
 	/**
-	 * µÇÂ¼ÕËºÅ
+	 * ï¿½ï¿½Â¼ï¿½Ëºï¿½
 	 */
 	private String loginName;
 	/**
-	 * µÇÂ¼ÃÜÂë
+	 * ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
 	 */
 	private String password;
 	/**
-	 * ´´½¨Ê±¼ä
+	 * ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 	 */
 	private Date createDate;
 	/**
-	 * ÐÞ¸ÄÊ±¼ä
+	 * ï¿½Þ¸ï¿½Ê±ï¿½ï¿½
 	 */
 	private Date modifyDate;
 	/**
@@ -34,7 +34,7 @@ public class Party {
 	 */
 	private String status;
 	/**
-	 * ²ÎÓëÈËÀàÐÐ£º¸öÈË»òÆóÒµ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½Ë»ï¿½ï¿½ï¿½Òµ
 	 */
 	private String partyType;
 	
@@ -120,4 +120,7 @@ public class Party {
 		this.partyIdentifications = partyIdentifications;
 	}
 
+	public void getPartList(){
+		System.out.println("----");
+	}
 }

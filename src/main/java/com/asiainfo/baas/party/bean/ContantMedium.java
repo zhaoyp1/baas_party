@@ -11,14 +11,14 @@ public class ContantMedium {
 	 * ��ϵý��ID
 	 */
 
-	private String contantMediumId13;
+	private String contantMediumId;
 
 
 
 	/**
 	 * ��ϵý������
 	 */
-	private String contantMediumType13;
+	private String contantMediumType;
 	/**
 	 * ��ϵý������
 	 */
