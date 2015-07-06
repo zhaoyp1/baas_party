@@ -66,6 +66,7 @@ public class Organization extends Party {
 	
 	public String toString(){
 		System.out.println("========getOrg");
+		System.out.println("========getOrg2");
 		return "";
 	}
 
@@ -90,6 +91,7 @@ public class Organization extends Party {
 	}
 
 	public void getOrg(){
+		System.out.println("========getOrg2");
 		System.out.println("========getOrg");
 	}
 }
