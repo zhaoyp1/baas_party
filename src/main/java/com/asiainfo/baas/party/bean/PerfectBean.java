@@ -2,7 +2,6 @@ package com.asiainfo.baas.party.bean;
 
 
 public class PerfectBean {
-	private static final long serialVersionUID = 1L;
 	public Organization getOrganization() {
 		return organization;
 	}

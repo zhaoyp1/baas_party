@@ -5,22 +5,14 @@ import java.util.Date;
 public class PartyName {
 
 	private String partyId;
-	/**
-	 * ��������
-	 */
+	 
 	private String languageType;
-	/**
-	 * ����������
-	 */
+	 
 	private String name;
 	private String partyNameId;
-	/**
-	 * ����ʱ��
-	 */
+	 
 	private Date createDate;
-	/**
-	 * �޸�ʱ��
-	 */
+	 
 	private Date modifyDate;
 	/**
 	 * ״̬

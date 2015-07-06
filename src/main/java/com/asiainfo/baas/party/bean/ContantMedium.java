@@ -1,43 +1,25 @@
 ﻿package com.asiainfo.baas.party.bean;
 
 import java.util.Date;
-
-/**
- * ��ϵý��
- */
+ 
 public class ContantMedium {
 
-	/**
-	 * ��ϵý��ID
-	 */
-
-	private String contantMediumId13;
+	 
+	private String contantMediumId;
 
 
 
-	/**
-	 * ��ϵý������
-	 */
-	private String contantMediumType13;
-	/**
-	 * ��ϵý������
-	 */
+	 
+	private String contantMediumType;
+	 
 	private String contantMediumValue;
-	/**
-	 * ״̬
-	 */
+	 
 	private String status;
-	/**
-	 * ��������
-	 */
+	 
 	private Date createDate;
-	/**
-	 * ��Чʱ��
-	 */
+	 
 	private Date effectiveDate;
-	/**
-	 * ʧЧʱ��
-	 */
+	 
 	private Date expireDate;
 
 	public String getContantMediumId() {

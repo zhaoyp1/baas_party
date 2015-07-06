@@ -1,10 +1,7 @@
 package com.asiainfo.baas.party.bean;
 
 import java.util.List;
-
-/**
- * ��ϵý��
- */
+ 
 public class ContantMediumRestBean {
 
     private String partyRoleId;

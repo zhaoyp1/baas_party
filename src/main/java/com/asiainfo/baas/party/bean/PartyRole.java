@@ -8,9 +8,7 @@ public class PartyRole {
 	 * ��ɫID
 	 */
 	private String partyRoleId;
-	/**
-	 * ��ɫ״̬
-	 */
+	 
 	private String status;
 	private java.util.Date createDate;
 	private java.util.Date modifyDate;
