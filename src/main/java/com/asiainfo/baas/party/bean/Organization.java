@@ -84,4 +84,7 @@ public class Organization extends Party {
 		this.name = name;
 	}
 
+	public void getOrg(){
+		System.out.println("========getOrg");
+	}
 }

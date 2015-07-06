@@ -68,6 +68,7 @@ public class PartyName {
 	}
 
 	public String getStatus() {
+		System.out.println("==============");
 		return this.status;
 	}
 
