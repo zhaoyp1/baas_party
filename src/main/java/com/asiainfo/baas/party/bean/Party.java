@@ -17,9 +17,7 @@ public class Party {
 	private Date createDate;
 	 
 	private Date modifyDate;
-	/**
-	 * ״̬
-	 */
+
 	private String status;
 	/**
 	 * ���������У����˻���ҵ
@@ -109,6 +107,7 @@ public class Party {
 	}
 
 	public void getPartList(){
+		System.out.println("冲突修改测试");
 		System.out.println("冲突修改测试");
 	}
 }

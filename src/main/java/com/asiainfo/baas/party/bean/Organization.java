@@ -4,22 +4,14 @@ import java.util.Date;
 
 public class Organization extends Party {
 
-	/**
-	 * ��֯ID
-	 */
+
 	private String organizationId;
 	private String name;
-	/**
-	 * ��������
-	 */
+
 	private String legalPerson;
-	/**
-	 * ��Ա����
-	 */
+
 	private int memberNumber;
-	/**
-	 * ����ʱ��
-	 */
+
 	private Date foundDate;
 	public Date getCreateDate() {
 		return createDate;
@@ -29,9 +21,6 @@ public class Organization extends Party {
 		this.createDate = createDate;
 	}
 
-	/**
-	 * �޸�ʱ��
-	 */
 	private Date modifyDate;
 	
 	private Date createDate;
@@ -95,5 +84,6 @@ public class Organization extends Party {
 
 	public void getOrg(){
 		System.out.println("========getOrg");
+		System.out.println("========getOrg2");
 	}
 }
