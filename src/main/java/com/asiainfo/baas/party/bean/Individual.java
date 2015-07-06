@@ -5,22 +5,23 @@ import java.util.Date;
 public class Individual extends Party {
 
 	/**
-	 * ¸öÈËID
+	 * ï¿½ï¿½ï¿½ï¿½ID
 	 */
 
 	private String individualId;
+	private String name;
 
 
 	/**
-	 * ÐÔ±ð
+	 * ï¿½Ô±ï¿½
 	 */
 	private String sex;
 	/**
-	 * ³öÉúÈÕÆÚ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	private Date birthday;
 	/**
-	 * ÐÞ¸ÄÊ±¼ä
+	 * ï¿½Þ¸ï¿½Ê±ï¿½ï¿½
 	 */
 	private Date modifyDate;
 	
@@ -64,6 +65,14 @@ public class Individual extends Party {
 
 	public void setModifyDate(Date modifyDate) {
 		this.modifyDate = modifyDate;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }
