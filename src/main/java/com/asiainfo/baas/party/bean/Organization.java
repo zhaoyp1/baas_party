@@ -65,6 +65,8 @@ public class Organization extends Party {
 	}
 	
 	public String toString(){
+		System.out.println("========getOrg");
+		System.out.println("========getOrg2");
 		String str="abc";
 		System.out.println(str);
 		System.out.println(this.legalPerson);
