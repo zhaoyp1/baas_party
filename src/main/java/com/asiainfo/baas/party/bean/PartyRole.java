@@ -5,7 +5,7 @@ import java.util.*;
 public class PartyRole {
 
 	/**
-	 * ½ÇÉ«ID
+	 * ï¿½ï¿½É«ID
 	 */
 	private String partyRoleId;
 	 
@@ -72,4 +72,7 @@ public class PartyRole {
 		this.partyRoleAssociations = partyRoleAssociations;
 	}
 
+	public void getPartyRole(){
+		System.out.println("------------");
+	}
 }

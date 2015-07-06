@@ -121,6 +121,6 @@ public class Party {
 	}
 
 	public void getPartList(){
-		System.out.println("----");
+		System.out.println("冲突修改测试");
 	}
 }
