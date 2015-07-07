@@ -5,9 +5,9 @@ import java.util.Date;
 public class ContantMedium {
 
 	 
-	private String contantMediumId;
+	private String contantMediumId1;
 
-	private String contantMediumType;
+	private String contantMediumType23;
 	 
 	private String contantMediumValue;
 	 
@@ -18,6 +18,10 @@ public class ContantMedium {
 	private Date effectiveDate;
 	 
 	private Date expireDate;
+
+	public String toString(){
+		return "abc" ;
+	}
 
 	public String getContantMediumId() {
 		return this.contantMediumId;
